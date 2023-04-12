@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans';
+}
+
+.container {
+    margin: 0 40px;
+    padding: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px 70px;
+    gap: 30px;
+    background-color: #ffffffff;
+
+    outline: 1px solid red;
+}
+
+.navigation {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navigation-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+}
+
+.navigation-menu__list {
+    margin-left: 32px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: capitalize;
+    color: #000000;
+}
+
+.user-menu {
+    display: flex;
+}
+
+.intro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    min-height: 485px;
+    background-image: url(../images/background/intro-image-divider.svg), url("../images/background/index-background.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+
+    outline: 1px solid blueviolet;
+}
+
+.intro-image {
+    margin-top: 70px;
+}
+
+.reasons {
+    outline: 1px solid blueviolet;
+}
+
+.subscription {
+    background-image: url(../images/background/Subscribtion-background.jpg);
+}
