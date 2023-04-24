@@ -15,22 +15,20 @@
         <!-- Главная навигация по сайту -->
         <nav class="navigation">
           <h2 class="visually-hidden">Навигация по сайту Седона</h2>
-          <ul class="navigation-menu">
-            <li class="navigation-menu-item">
-              <a
-                class="navigation-menu-link"
-                href="index.html"
-                aria-label="Ссылка на сайт Седона"
-              >
-                <img
-                  class="header-logo"
-                  src="./images/svg/logo.svg"
-                  width="139"
-                  height="70"
-                  alt="Лого Седона"
-                />
-              </a>
-            </li>
+          <a
+          class="header-logo-link"
+          href="index.html"
+          aria-label="Ссылка на сайт Седона"
+        >
+          <img
+            class="header-logo"
+            src="./images/svg/logo.svg"
+            width="140"
+            height="70"
+            alt="Лого Седона"
+          />
+        </a>
+          <ul class="navigation-menu list-reset">
             <li class="navigation-menu-item">
               <a
                 class="navigation-menu-link navigation-menu-link-active"
@@ -48,7 +46,7 @@
         </nav>
 
         <!-- Пользовательское меню -->
-        <ul class="user-menu">
+        <ul class="user-menu list-reset">
           <li class="user-menu-item">
             <a
               class="user-menu-link user-menu-search"
@@ -58,30 +56,31 @@
           </li>
           <li class="user-menu-item">
             <a
-              class="user-menu-link user-menu-favorites"
+              class="user-menu-link user-menu-favorites" data-counter="12"
               href="#"
               aria-label="Избранное"
             ></a>
           </li>
           <li class="user-menu-item">
-            <a class="user-menu-link search-button" href="#">Хочу сюда!</a>
+            <a class="user-menu-link button user-menu-button" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </header>
 
+
       <main class="catalog-page">
         <section class="catalog-params">
           <h1 class="catalog-params-title">Гостиницы Седоны</h1>
-          <ul class="breadcrumps">
-            <li class="breadcrumps-item">
+          <ul class="breadcrumbs-list list-reset">
+            <li class="breadcrumbs-item breadcrumbs-image">
               <a
-                class="breadcrumps-link"
+                class="breadcrumbs-link"
                 href="index.html"
                 aria-label="Переход на главную страницу"
               ></a>
             </li>
-            <li class="breadcrumps-item">
-              <a class="breadcrumps-link" href="catalog.html">Гостиницы</a>
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-link" href="catalog.html">Гостиницы</a>
             </li>
           </ul>
           <!-- Параметры поиска гостиницы -->
@@ -92,7 +91,7 @@
           >
             <fieldset class="catalog-filter-options">
               <legend class="catalog-filter-title">Инфраструктура:</legend>
-              <ul class="catalog-filter-list">
+              <ul class="catalog-filter-list list-reset">
                 <li class="catalog-filter-item">
                   <label class="item-control">
                     <input
@@ -136,7 +135,7 @@
 
             <fieldset class="catalog-filter-options">
               <legend class="catalog-filter-title">Тип Жилья:</legend>
-              <ul class="catalog-filter-list">
+              <ul class="catalog-filter-list list-reset">
                 <li class="catalog-filter-item">
                   <label class="item-control">
                     <input
@@ -187,7 +186,6 @@
                     name="min-price"
                     value="0"
                   />
-                  <span class="price-field-inner-text">от</span>
                 </label>
                 <label class="catalog-filter-price">
                   <input
@@ -196,7 +194,6 @@
                     name="max-price"
                     value="9000"
                   />
-                  <span class="price-field-inner-text">до</span>
                 </label>
               </div>
               <div class="price-slider">
@@ -206,10 +203,10 @@
             </fieldset>
 
             <div class="catalog-filter-buttons-wrapper">
-              <button class="catalog-filter-submit button" type="submit">
+              <button class="catalog-filter-submit button button-blue" type="submit">
                 Применить
               </button>
-              <button class="catalog-filter-reset button" type="reset">
+              <button class="catalog-filter-reset button button-reset" type="reset">
                 Сбросить
               </button>
             </div>
@@ -240,20 +237,20 @@
                 </option>
               </select>
             </form>
-            <ul class="catalog-view-list">
+            <ul class="catalog-view-list list-reset">
               <li class="catalog-view-item">
-                <button class="sort-buttons" type="button"></button>
+                <button class="sort-button sort-button-1" type="button"></button>
               </li>
               <li class="catalog-view-item">
-                <button class="sort-buttons" type="button"></button>
+                <button class="sort-button sort-button-2" type="button"></button>
               </li>
               <li class="catalog-view-item">
-                <button class="sort-buttons" type="button"></button>
+                <button class="sort-button sort-button-3" type="button"></button>
               </li>
             </ul>
           </div>
 
-          <ul class="apartments-cards">
+          <ul class="apartments-cards list-reset">
             <li class="apartments-card">
               <a class="apartments-link" href="#">
                 <img
@@ -266,8 +263,8 @@
               <div class="apartments-info">
                 <h4 class="apartments-type">Гостиница</h4>
                 <p class="apartments-price">От 4000 &#8381;</p>
-                <a class="apartments-description button" href="#">Подробнее</a>
-                <button class="apartments-favourites button" type="button">В избранное</button>
+                <a class="apartments-description button button-params" href="#">Подробнее</a>
+                <button class="apartments-favourites button button-params button-blue" type="button">В избранное</button>
                 <span class="apartments-card-stars"></span>
                 <span class="apartments-popularity-counter">Рейтинг: 8,5</span>
               </div>
@@ -285,8 +282,8 @@
               <div class="apartments-info">
                 <h4 class="apartments-type">Гостиница</h4>
                 <p class="apartments-price"> От 5000 &#8381; </p>
-                <a class="apartments-description button" href="#">Подробнее</a>
-                <button class="apartments-favourites button" type="button">В избранное</button>
+                <a class="apartments-description button button-params" href="#">Подробнее</a>
+                <button class="apartments-favourites button button-params button-blue" type="button">В избранное</button>
                 <span class="apartments-card-stars"></span>
                 <span class="apartments-popularity-counter">Рейтинг:9,2</span>
               </div>
@@ -308,8 +305,8 @@
               <div class="apartments-info">
                 <h4 class="apartments-type">Гостиница</h4>
                 <p class="apartments-price"> От 2500 &#8381; </p>
-                <a class="apartments-description button" href="#">Подробнее</a>
-                <button class="apartments-favourites button" type="button">В избранное</button>
+                <a class="apartments-description button button-params" href="#">Подробнее</a>
+                <button class="apartments-favourites button button-params button-blue" type="button">В избранное</button>
                 <span class="apartments-card-stars"></span>
                 <span class="apartments-popularity-counter">Рейтинг: 6,9</span>
               </div>
@@ -331,14 +328,14 @@
               <div class="apartments-info">
                 <h4 class="apartments-type">Гостиница</h4>
                 <p class="apartments-price"> От 1500 &#8381; </p>
-                <a class="apartments-description button" href="#">Подробнее</a>
-                <button class="apartments-favourites button" type="button">В избранное</button>
+                <a class="apartments-description button button-params" href="#">Подробнее</a>
+                <button class="apartments-favourites button button-params button-blue" type="button">В избранное</button>
                 <span class="apartments-card-stars"></span>
                 <span class="apartments-popularity-counter">Рейтинг: 5,0</span>
               </div>
             </li>
           </ul>
-          <ul class="pagination-list">
+          <ul class="pagination-list list-reset">
             <li class="pagination-list-item">
               <a class="pagination-list-link" href="#">1</a>
             </li>
@@ -360,54 +357,52 @@
           </ul>
         </section>
 
-        <section class="subscription subscription-inner">
-          <div class="subsription-heading heading">
-            <h2 class="heading-title">Подпишитесь на рассылку</h2>
-            <p class="heading-description">
-              Только полезная информация и никакого спама, честное бойскаутское!
-            </p>
-          </div>
+        <section class="subscription">
+          <h2 class="heading-title">Подпишитесь на рассылку</h2>
+          <p class="heading-description">
+            Только полезная информация и никакого спама,<br/> честное бойскаутское!
+          </p>
 
-          <!-- Отправка формы -->
-          <form
-            class="subscribe-form"
-            action="https://echo.htmlacademy.ru/"
-            method="post"
-          >
-            <input
-              class="subscribe-form field-label"
-              type="email"
-              aria-label="Введите Ваш email"
-              placeholder="Ваш email"
-            />
-            <button class="subscribe-form button" type="submit">
-              Подписаться
-            </button>
-          </form>
-        </section>
+        <!-- Отправка формы -->
+        <form
+          class="subscribe-form"
+          action="https://echo.htmlacademy.ru/"
+          method="post"
+        >
+          <input
+            class="subscribe-form-field"
+            type="email"
+            aria-label="Введите Ваш email"
+            placeholder="Ваш email"
+          />
+          <button class="subscribe-form-button button button-blue" type="submit">
+            Подписаться
+          </button>
+        </form>
+      </section>
       </main>
 
       <footer class="footer">
         <h2 class="visually-hidden">Список ссылок на соцсети</h2>
         <!-- Список соцсетей -->
-        <ul class="footer-list">
+        <ul class="footer-list list-reset">
           <li class="footer-item">
             <a
-              class="footer-link"
+              class="footer-link item-vk"
               href="https://vk.com/htmlacademy"
               aria-label="HTML Academy в VK"
             ></a>
           </li>
           <li class="footer-item">
             <a
-              class="footer-link"
+              class="footer-link item-telegram"
               href="https://t.me/htmlacademy"
               aria-label="HTML Academy в Telegram"
             ></a>
           </li>
           <li class="footer-item">
             <a
-              class="footer-link"
+              class="footer-link item-youtube"
               href="https://www.youtube.com/user/htmlacademyru"
               aria-label="HTML Academy в YouTube"
             ></a>

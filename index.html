@@ -16,7 +16,7 @@
         <nav class="navigation">
           <h2 class="visually-hidden">Навигация по сайту Седона</h2>
           <a
-          class="navigation-menu-link"
+          class="header-logo-link"
           href="index.html"
           aria-label="Ссылка на сайт Седона"
         >
@@ -28,7 +28,7 @@
             alt="Лого Седона"
           />
         </a>
-          <ul class="navigation-menu">
+          <ul class="navigation-menu list-reset">
             <li class="navigation-menu-item">
               <a
                 class="navigation-menu-link navigation-menu-link-active"
@@ -46,7 +46,7 @@
         </nav>
 
         <!-- Пользовательское меню -->
-        <ul class="user-menu">
+        <ul class="user-menu list-reset">
           <li class="user-menu-item">
             <a
               class="user-menu-link user-menu-search"
@@ -56,7 +56,7 @@
           </li>
           <li class="user-menu-item">
             <a
-              class="user-menu-link user-menu-favorites"
+              class="user-menu-link user-menu-favorites" data-counter="12"
               href="#"
               aria-label="Избранное"
             ></a>
@@ -85,17 +85,17 @@
 
         <!-- Основные преимущества для посещения туристического города Седона. Отдельный блок -->
         <section class="advantages">
-          <!-- <div class="advantages-heading heading"> -->
-            <h2 class="heading">
+          <div class="advantages-heading">
+            <h2 class="heading-title">
               Седона - небольшой городок в Аризоне, заслуживающий большего!
             </h2>
             <p class="heading-description">
               Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!
             </p>
-          <!-- </div> -->
+          </div>
 
           <!-- Список преимуществ -->
-            <ul class="advantages-list">
+            <ul class="advantages-list list-reset">
               <!-- Преимущество - уникальный город + фото -->
               <li class="advantages-item advantages-item-figure">
                 <figure class="advantages-figure">
@@ -159,7 +159,7 @@
                     alt="Фотография города Седона"
                   />
                   <figcaption class="advantages-figcaption">
-                    <h3 class="advantages-figcaption-title">Там есть <br />мост дьявола</h3>
+                    <h3 class="advantages-figcaption-title">Там есть <br/>мост дьявола</h3>
                     <p class="advantages-description">
                       Да, по нему можно пройти! Если вы осмелитесь, разумеется
                     </p>
@@ -172,17 +172,19 @@
 
         <!-- Основные преимущества для посещения туристического города Седона. Отдельный блок -->
         <section class="reasons">
-            <h2 class="heading">
+          <div class="reasons-heading">
+            <h2 class="heading-title">
               Приезжайте в Седону отдохнуть в комфорте и уюте!
             </h2>
             <p class="heading-description">
               Опытный персонал и качественное обслуживание!
             </p>
+          </div>
 
           <!-- Список преимуществ -->
-          <ul class="reasons-list">
+          <ul class="reasons-list list-reset">
             <!-- Преимущество - жилье -->
-            <li class="reasons-item reasons-item-apartments">
+            <li class="reasons-item">
               <span class="reasons-item-apartments"></span>
               <h3 class="reasons-title">Жильё</h3>
               <p class="reasons-description">
@@ -191,7 +193,7 @@
             </li>
 
             <!-- Преимущество - еда -->
-            <li class="reasons-item reasons-item-food">
+            <li class="reasons-item">
               <span class="reasons-item-food"></span>
               <h3 class="reasons-title">Еда</h3>
               <p class="reasons-description">
@@ -201,7 +203,7 @@
             </li>
 
             <!-- Преимущество - сувениры -->
-            <li class="reasons-item reasons-item-souvenirs">
+            <li class="reasons-item">
               <span class="reasons-item-souvenirs"></span>
               <h3 class="reasons-title">Сувениры</h3>
               <p class="reasons-description">
@@ -214,19 +216,20 @@
         <!-- Секция поиска гостиницы -->
         <section class="search">
           <h2 class="visually-hidden">Поиск гостиницы</h2>
-            <p class="heading">Заинтересовались?</p>
+            <p class="heading-title">Заинтересовались?</p>
             <p class="heading-description">
               Укажите предполагаемые даты поездки, <br/> и мы покажем вам лучшие
               предложения гостиниц в Седоне
             </p>
-          <a class="search-link button" href="catalog.html">
+
+          <button class="search-link button" type="button">
             Поиск гостиницы в Седоне
-          </a>
+          </button>
         </section>
 
         <!-- Секция подписки на рассылку + кнопка отправки формы -->
         <section class="subscription subscription-main-page">
-            <h2 class="heading">Подпишитесь на рассылку</h2>
+            <h2 class="heading-title">Подпишитесь на рассылку</h2>
             <p class="heading-description">
               Только полезная информация и никакого спама,<br/> честное бойскаутское!
             </p>
@@ -238,12 +241,12 @@
             method="post"
           >
             <input
-              class="subscribe-form field-label"
+              class="subscribe-form-field"
               type="email"
               aria-label="Введите Ваш email"
               placeholder="Ваш email"
             />
-            <button class="subscribe-form button" type="submit">
+            <button class="subscribe-form-button button button-blue" type="submit">
               Подписаться
             </button>
           </form>
@@ -254,7 +257,7 @@
       <footer class="footer">
         <h2 class="visually-hidden">Список ссылок на соцсети</h2>
         <!-- Список соцсетей -->
-        <ul class="footer-list">
+        <ul class="footer-list list-reset">
           <li class="footer-item">
             <a
               class="footer-link item-vk"
@@ -304,7 +307,7 @@
           action="https://echo.htmlacademy.ru/"
           method="post"
         >
-          <label class="arrival-date">
+          <label class="arrival-info">
             Дата Заезда:
             <input
               class="arrival-date-input"
@@ -312,11 +315,11 @@
               value="27 апреля 2020"
               required
             />
-            <span class="warning-message wrong-date"
-              >Мы не можем отправить Вас в прошлое.</span
+            <p class="warning-message wrong-date"
+              >Мы не можем отправить Вас в прошлое.</p
             >
           </label>
-          <label class="arrival-date">
+          <label class="arrival-info">
             Дата Выезда:
             <input
               class="arrival-date-input"
@@ -324,10 +327,36 @@
               value="1 сентября 2023"
               required
             />
-            <span class="warning-message"
-              >На эти даты есть свободные номера. Пока есть</span
+            <p class="warning-message"
+              >На эти даты есть свободные номера. Пока есть</p
             >
           </label>
+          <label class="arrival-info">
+            Взрослые:
+            <input
+              class="arrival-info-input"
+              type="number"
+              value="2"
+              min="1"
+              max="10"
+              required
+            />
+          </label>
+          <label class="arrival-info">
+            Дети:
+            <span class="chilren-icon-info"></span>
+            <input
+              class="arrival-info-input"
+              type="number"
+              value="2"
+              min="0"
+              max="10"
+              required
+            />
+          </label>
+          <a class="modal-button button-blue" href="catalog.html">
+            Найти
+          </a>
         </form>
       </div>
     </div>
