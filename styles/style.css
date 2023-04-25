@@ -73,26 +73,31 @@ a {
 .header {
   display: flex;
   justify-content: space-between;
+	gap: 70px;
   padding: 0 70px;
 }
 
 .navigation {
   display: flex;
+	gap: 44px;
+	min-width: 500px;
 }
 
 .header-logo-link {
   display: flex;
   z-index: 2;
-  margin-bottom: -8px;
+  margin-bottom: -8px; 
 }
 
 .navigation-menu {
   margin: 0;
-  padding: 0;
+  padding: 20px 0;
   display: flex;
+	flex-wrap: wrap;
   align-items: center;
   list-style: none;
   gap: 32px;
+	align-self: flex-start;
 }
 
 .navigation-menu-item {
@@ -102,35 +107,37 @@ a {
   text-transform: capitalize;
 }
 
-.navigation-menu-item:first-child {
-  margin-left: 44px;
-}
 
 .user-menu {
   display: flex;
-  align-items: center;
+	flex-wrap: wrap;
+	align-self: flex-start;
+	padding: 10px 0;
+	min-width: 272px;
+	row-gap: 10px;
+}
+
+.user-menu-item:last-child {
+  margin-left: 24px;
 }
 
 .user-menu-search {
-  width: 23px;
-  height: 23px;
+  width: 44px;
+  height: 44px;
   display: block;
   background-image: url("../images/svg/search.svg");
   background-repeat: no-repeat;
-  background-size: contain;
   background-position: center;
 }
 
 .user-menu-favorites {
-  width: 23px;
-  height: 23px;
+  width: 44px;
+  height: 44px;
   display: block;
   position: relative;
   background-image: url("../images/svg/heart-icon.svg");
   background-repeat: no-repeat;
-  background-size: contain;
   background-position: center;
-  margin-left: 25px;
 }
 
 .user-menu-favorites::after {
@@ -140,8 +147,8 @@ a {
   border-radius: 10px;
   min-width: 20px;
   height: 20px;
-  left: 12px;
-  bottom: 11px;
+  left: 22px;
+  top: 3px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -153,7 +160,7 @@ a {
 
 /* Кнопка */
 .button {
-  padding: 8px 34px;
+  padding: 8px 14px;
   background: #756157;
   border-radius: 4px;
   font-weight: 700;
@@ -161,6 +168,7 @@ a {
   line-height: 20px;
   text-transform: uppercase;
   color: #ffffff;
+	text-align: center;
   font-family: inherit;
   cursor: pointer;
   border: none;
@@ -170,13 +178,23 @@ a {
   background-color: #82b3d3;
 }
 
+.button-blue:hover {
+	background-color: #68A2CA;
+}
+
+/* .button-blue:not(:active) {
+	background-color: #E5E5E5;
+} */
+
 .user-menu-button {
-  margin-left: 32px;
+	display: block;
+	min-width: 160px;
 }
 
 /* Блок интро */
 .intro {
   background-image: url("../images/background/index-background.jpg");
+	background-color: #3f5e72;
   background-repeat: no-repeat;
   background-size: contain;
   padding: 50px 370px 82px 370px;
@@ -452,6 +470,7 @@ a {
 .subscription-main-page {
   padding: 96px 258px 104px 258px;
   background-image: url("../images/background/Subscribe.jpg");
+	background-color: #3f5e72;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -488,48 +507,40 @@ a {
 }
 
 .footer {
-  height: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+	padding: 45px 70px 35px 70px;
+	display: grid;
+	grid-template-columns: 150px 350px 115px;
+	gap: 20px 220px;
+	align-items: start;
 }
 
 .footer-list {
   display: flex;
+	flex-wrap: wrap;
 }
 
-.footer-item {
-  margin-left: 26px;
+.footer-link {
+	width: 47px;
+	height: 40px;
+	display: block;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.footer-logo-link {
+	display: flex;
 }
 
 .item-vk {
-  width: 24px;
-  height: 14px;
-  display: block;
-  background-image: url("../images/svg/VK.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+  background-image: url("../images/svg/vk.svg");
 }
 
 .item-telegram {
-  width: 24px;
-  height: 14px;
-  display: block;
   background-image: url("../images/svg/telegram.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
 }
 
 .item-youtube {
-  width: 24px;
-  height: 14px;
-  display: block;
   background-image: url("../images/svg/youtube.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
 }
 
 .footer-link-phone {
@@ -538,16 +549,13 @@ a {
   line-height: 40px;
 }
 
-.footer-logo {
-  margin-right: 70px;
-}
-
 /* Страница каталога */
 
 .catalog-params {
-  background-image: url("../images/background/catalog-background.jpg");
+  background-image: url("../images/background/catalog-hotels-background.jpg");
+	background-color: #82b3d3;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   padding: 35px 70px 74px 70px;
   color: #ffffff;
 }
@@ -562,9 +570,9 @@ a {
 
 .breadcrumbs-list {
   display: flex;
+	flex-wrap: wrap;
   align-items: center;
   margin-bottom: 40px;
-  padding: auto;
 }
 
 .breadcrumbs-item {
@@ -592,14 +600,16 @@ a {
   width: 7px;
   height: 10px;
   position: absolute;
-  left: 24px;
-  top: 2px;
+  right: -15px;
+  top: 50%;
+	transform: translateY(-50%);
 }
 
 .catalog-filter {
   margin: 0;
   padding: 0;
   display: flex;
+	flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -620,6 +630,54 @@ a {
   font-size: 18px;
   line-height: 23px;
   margin-bottom: 16px;
+}
+
+.item-control {
+	padding-left: 36px;
+	position: relative;
+	cursor: pointer;
+}
+
+.checkbox-icon {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background-color: #ffffff;
+	border-radius: 4px;
+	left: 0;
+	top: 2px;
+}
+
+.checkbox-item:checked + .checkbox-icon::before {
+	content: "";
+	position: absolute;
+	width: 12px;
+	height: 10px;
+	left: 5px;
+	top: 5px;
+	background-image: url("../images/svg/checked-icon.svg");
+	background-position: center;
+} 
+
+.radio-icon {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background-color: #ffffff;
+	border-radius: 50%;
+	left: 0;
+	top: 2px;
+}
+
+.radio-item:checked + .radio-icon::before {
+	content: "";
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	left: 5px;
+	top: 5px;
+	background-color: #3f5e72;
+	border-radius: 50%;
 }
 
 .catalog-filter-price-input {
@@ -690,14 +748,15 @@ a {
 }
 
 .search-results {
-  padding: 56px 30px 60px 50px;
+  padding: 56px 70px 60px 70px;
 }
 
 .search-params {
   display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
   justify-content: space-between;
   margin-bottom: 40px;
-  padding: 0 20px 0 0;
 }
 
 .search-result {
@@ -719,10 +778,16 @@ a {
   color: #333333;
   font-size: 18px;
   line-height: 21px;
+	appearance: none;
+	background-image: url("../images/svg/arrow-down.svg");
+	background-repeat: no-repeat;
+	background-position: center right 20px;
+	cursor: pointer;
 }
 
 .catalog-view-list {
   display: flex;
+	flex-wrap: wrap;
   align-items: center;
   gap: 5px;
 }
@@ -742,6 +807,7 @@ a {
   border-radius: 5px;
   width: 100%;
   height: 100%;
+	cursor: pointer;
 }
 
 .sort-button-1 {
@@ -771,14 +837,15 @@ a {
 
 .apartments-card {
   padding: 20px;
-  border: 1px solid #e5e5e5;
+  box-shadow: 0 0 1px 1px #e5e5e5;
   border-radius: 5px;
-  width: 95%;
 }
 
 .apartments-link {
   padding: 0;
   margin: 0;
+	display: grid;
+	gap: 17px;
 }
 
 .apartments-name {
@@ -821,9 +888,22 @@ a {
 }
 
 .apartments-card-stars {
+	height: 17px;
+	align-self: center;
   background-image: url("../images/svg/star.svg");
-  background-repeat: no-repeat;
-  background-position: center left;
+  background-repeat: space;
+}
+
+.stars-4 {
+	width: 86px;
+}
+
+.stars-3 {
+	width: 71px;
+}
+
+.stars-2 {
+	width: 42px;
 }
 
 .apartments-popularity-counter {
@@ -846,6 +926,14 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+}
+.pagination-list-link {
+	width: inherit;
+	height: inherit;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
 }
 
 .pagination-list-item {
@@ -918,6 +1006,7 @@ a {
   margin-top: 64px;
   display: flex;
   flex-direction: column;
+	flex-wrap: wrap;
   gap: 24px;
 }
 
@@ -925,6 +1014,9 @@ a {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
 }
 
 .arrival-date-input {
@@ -938,10 +1030,54 @@ a {
   width: 420px;
   flex-grow: 1;
   height: 100%;
-  margin-left: 24px;
+	position: relative;
+}
+
+.arrival-date-input::after {
+	content: "";
+	background-image: url("../images/svg/calendar.svg");
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 15px;
+	height: 16px;
+	position: absolute;
+}
+
+.arrival-date-wrapper {
+	margin-right: 24px;
+}
+
+.departure-date-wrapper {
+	margin-right: 18px;
+}
+
+.adults-wrapper {
+	margin-right: 46px;
+}
+
+.chilren-icon-info {
+	width: 26px;
+	height: 26px;
+	background-color: #83B3D3;
+	border-radius: 50%;
+	position: relative;
+	margin-left: 10px;
+	margin-right: 46px;
+	cursor: pointer;
+}
+
+.chilren-icon-info::before {
+	content: "\00A1";
+	width: 2px;
+	height: 12px;
+	color: #ffffff;
+	position: absolute;
+	left: 10px;
+	top: -3px;
 }
 
 .warning-message {
+	display: none;
   margin: 0;
   font-weight: 400;
   font-size: 16px;
@@ -953,6 +1089,16 @@ a {
   color: #ff5757;
 }
 
+.arrival-info-people-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 88px;
+}
+
+.arrival-info-controls {
+	display: flex;
+}
+
 .arrival-info-input {
 	font-weight: 700;
   font-size: 18px;
@@ -960,10 +1106,43 @@ a {
   background: #f2f2f2;
   border-radius: 4px;
 	border: none;
-	width: 110px;
+	width: 30px;
 	height: 48px;
-	margin-left: 46px;
 	text-align: center;
+}
+
+.arrival-info-input:focus {
+	border-color: 3px solid #82B3D3;
+	border-radius: 4px;
+}
+
+.button-minus,
+.button-plus {
+	width: 40px;
+	height: 48px;
+	border: none;
+	border-radius: 0 4px;
+	cursor: pointer;
+	color: rgba(117, 97, 87, 0.3);
+	background-color: #F2F2F2;
+}
+
+.button-minus:hover {
+	color: #000000;
+}
+
+.button-plus:hover {
+	color: #000000;
+}
+
+.button-minus:focus {
+	border: 3px solid #82B3D3;
+	border-radius: 4px;
+}
+
+.button-plus:focus {
+	border: 3px solid #82B3D3;
+	border-radius: 4px;
 }
 
 .modal-button {
@@ -974,7 +1153,7 @@ a {
 	text-transform: uppercase;
 	text-align: center;
 	padding: 18px;
-	border-radius: 4px;
+	border-radius: 10px;
 	margin-top: 24px;
 }
 
@@ -1005,4 +1184,17 @@ a {
 
 .modal-close-button::after {
   transform: rotate(-45deg);
+}
+
+.modal-close-button:hover {
+	background-color: #E6E6E6;
+}
+
+.modal-close-button:focus {
+	border: 3px solid #83B3D3;
+}
+
+.modal-close-button:active {
+	background-color: #E6E6E6;
+	opacity: 0.5;
 }
