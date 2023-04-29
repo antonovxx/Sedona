@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./vendor/nouislider/nouislider.css">
     <link rel="stylesheet" href="./styles/normalize.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <title>Каталог гостиниц Седоны</title>
@@ -62,7 +63,7 @@
             ></a>
           </li>
           <li class="user-menu-item">
-            <a class="user-menu-link button user-menu-button" href="#">Хочу сюда!</a>
+            <a class="user-menu-link button user-menu-button button-brown" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </header>
@@ -182,6 +183,7 @@
                 <label class="catalog-filter-price">
                   <input
                     class="catalog-filter-price-input"
+                    id="min-price"
                     type="text"
                     name="min-price"
                     value="0"
@@ -190,23 +192,21 @@
                 <label class="catalog-filter-price">
                   <input
                     class="catalog-filter-price-input"
+                    id="max-price"
                     type="text"
                     name="max-price"
                     value="9000"
                   />
                 </label>
               </div>
-              <div class="price-slider">
-                <button class="price-slider-button"></button>
-                <button class="price-slider-button"></button>
-              </div>
+              <div class="slider" id="slider"></div>
             </fieldset>
 
             <div class="catalog-filter-buttons-wrapper">
               <button class="catalog-filter-submit button button-blue" type="submit">
                 Применить
               </button>
-              <button class="catalog-filter-reset button button-reset" type="reset">
+              <button class="catalog-filter-reset button button-reset" id="button-reset" type="reset">
                 Сбросить
               </button>
             </div>
@@ -263,7 +263,7 @@
               <div class="apartments-info">
                 <h4 class="apartments-type">Гостиница</h4>
                 <p class="apartments-price">От 4000 &#8381;</p>
-                <a class="apartments-description button button-params" href="#">Подробнее</a>
+                <a class="apartments-description button button-params button-brown" href="#">Подробнее</a>
                 <button class="apartments-favourites button button-params button-blue" type="button">В избранное</button>
                 <span class="apartments-card-stars stars-4"></span>
                 <span class="apartments-popularity-counter">Рейтинг: 8,5</span>
@@ -282,8 +282,8 @@
               <div class="apartments-info">
                 <h4 class="apartments-type">Гостиница</h4>
                 <p class="apartments-price"> От 5000 &#8381; </p>
-                <a class="apartments-description button button-params" href="#">Подробнее</a>
-                <button class="apartments-favourites button button-params button-blue" type="button">В избранное</button>
+                <a class="apartments-description button button-params button-brown" href="#">Подробнее</a>
+                <button class="apartments-favourites button button-params button-green" type="button">В избранном</button>
                 <span class="apartments-card-stars stars-4"></span>
                 <span class="apartments-popularity-counter">Рейтинг: 9,2</span>
               </div>
@@ -305,7 +305,7 @@
               <div class="apartments-info">
                 <h4 class="apartments-type">Гостиница</h4>
                 <p class="apartments-price"> От 2500 &#8381; </p>
-                <a class="apartments-description button button-params" href="#">Подробнее</a>
+                <a class="apartments-description button button-params button-brown" href="#">Подробнее</a>
                 <button class="apartments-favourites button button-params button-blue" type="button">В избранное</button>
                 <span class="apartments-card-stars stars-3"></span>
                 <span class="apartments-popularity-counter">Рейтинг: 6,9</span>
@@ -328,7 +328,7 @@
               <div class="apartments-info">
                 <h4 class="apartments-type">Гостиница</h4>
                 <p class="apartments-price"> От 1500 &#8381; </p>
-                <a class="apartments-description button button-params" href="#">Подробнее</a>
+                <a class="apartments-description button button-params button-brown" href="#">Подробнее</a>
                 <button class="apartments-favourites button button-params button-blue" type="button">В избранное</button>
                 <span class="apartments-card-stars stars-2"></span>
                 <span class="apartments-popularity-counter">Рейтинг: 5,0</span>
@@ -337,7 +337,7 @@
           </ul>
           <ul class="pagination-list list-reset">
             <li class="pagination-list-item">
-              <a class="pagination-list-link" href="#">1</a>
+              <a class="pagination-list-link pagination-list-link-current" href="#">1</a>
             </li>
             <li class="pagination-list-item">
               <a class="pagination-list-link" href="#">2</a>
@@ -349,7 +349,7 @@
               <a class="pagination-list-link" href="#">4</a>
             </li>
             <li class="pagination-list-item">
-              <span class="pagination-list-points">...</span>
+              <span class="pagination-list-link pagination-list-link-divider">...</span>
             </li>
             <li class="pagination-list-item">
               <a class="pagination-list-link" href="#">10</a>
@@ -424,5 +424,8 @@
         </a>
       </footer>
     </div>
+    <script src="./vendor/nouislider/nouislider.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/choose-link.js"></script>
   </body>
 </html>

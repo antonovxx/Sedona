@@ -30,7 +30,7 @@
           <ul class="navigation-menu list-reset">
             <li class="navigation-menu-item">
               <a
-                class="navigation-menu-link navigation-menu-link-active"
+                class="navigation-menu-link "
                 href="index.html"
                 >Главная</a
               >
@@ -63,7 +63,7 @@
           </li>
           <li class="user-menu-item">
             <a
-              class="user-menu-link button user-menu-button"
+              class="user-menu-link button user-menu-button button-brown"
               href="catalog.html"
               >Хочу сюда!</a
             >
@@ -227,7 +227,7 @@
             и мы покажем вам лучшие предложения гостиниц в Седоне
           </p>
 
-          <button class="search-link button" type="button">
+          <button class="search-link button button-brown" type="button">
             Поиск гостиницы в Седоне
           </button>
         </section>
@@ -307,7 +307,7 @@
     </div>
 
     <!-- Модальное окно. Открытие: is-open -->
-    <div class="modal-container is-open">
+    <div class="modal-container hidden">
       <div class="modal-content">
         <h2 class="modal-title">Поиск гостиницы в седоне</h2>
         <button
@@ -320,70 +320,80 @@
           action="https://echo.htmlacademy.ru/"
           method="post"
         >
-          <div class="arrival-info-wrapper">
-            <label class="arrival-info">
-              <span class="arrival-date-wrapper">Дата Заезда:</span> 
+          <div class="arrival-wrapper is-invalid">
+            <label class="arrival-item">
+              <span class="arrival-item-text">Дата Заезда:</span>
               <input
-                class="arrival-date-input"
+                class="arrival-item-input"
                 type="text"
                 value="27 апреля 2020"
                 required
               />
-              <span class="warning-message wrong-date"
-                >Мы не можем отправить Вас в прошлое.</span
-              >
             </label>
+            <span class="arrival-message"
+              >Мы не можем отправить Вас в прошлое.</span
+            >
           </div>
-          <div class="arrival-info-wrapper">
-            <label class="arrival-info">
-              <span class="departure-date-wrapper">Дата Выезда:</span> 
+          <div class="arrival-wrapper">
+            <label class="arrival-item">
+              <span class="arrival-item-text">Дата Выезда:</span>
               <input
-                class="arrival-date-input"
+                class="arrival-item-input"
                 type="text"
                 value="1 сентября 2023"
                 required
               />
-              <span class="warning-message"
-                >На эти даты есть свободные номера. Пока есть</span
-              >
             </label>
+            <span class="arrival-message"
+              >На эти даты есть свободные номера. Пока есть</span
+            >
           </div>
-          <div class="arrival-info-people-wrapper">
-            <label class="arrival-info">
-              <span class="adults-wrapper">Взрослые:</span> 
-              <span class="arrival-info-controls">
+
+          <div class="arrival-wrapper-group">
+            <div class="arrival-group-item-wrapper">
+              <label class="arrival-info arrival-info-adults-label" for="arrival-adults">Взрослые:</label>
+              <div class="arrival-info-controls">
                 <button class="button-minus" type="button">-</button>
                 <input
                   class="arrival-info-input"
                   type="text"
                   value="2"
-                  min="1"
-                  max="10"
+                  id="arrival-adults"
                   required
                 />
                 <button class="button-plus" type="button">+</button>
+              </div>
+            </div>
+
+            <div class="arrival-group-item-wrapper">
+              <label class="arrival-info" for="arrival-children">Дети:</label>
+              <span class="arrival-tooltip">
+                <span class="arrival-tooltip-icon"></span>
+                <span class="arrival-tooltip-content">
+                  Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                </span>
               </span>
-            </label>
-            <label class="arrival-info">
-              <span class="children-wrapper">Дети:</span> 
-              <span class="chilren-icon-info"></span>
-              <span class="arrival-info-controls">
+              <span class="children-icon-info"></span>
+              <div class="arrival-info-controls">
                 <button class="button-minus" type="button">-</button>
                 <input
                   class="arrival-info-input"
                   type="text"
                   value="2"
-                  min="0"
-                  max="10"
+                  id="arrival-children"
                   required
                 />
                 <button class="button-plus" type="button">+</button>
-              </span>
-            </label>
+              </div>
+            </div>
           </div>
-          <a class="modal-button button-blue" href="catalog.html"> Найти </a>
+
+          <button class="modal-button button-blue" type="submit" href="catalog.html">Найти</button>
         </form>
       </div>
     </div>
+    <script src="./pristine/pristine.min.js"></script>
+    <script type="module" src="./js/main.js"></script>
+    <script src="./js/choose-link.js"></script>
   </body>
 </html>
